@@ -1,0 +1,57 @@
+[
+  {
+    "Id": "c63e0498-d3fa-44f1-96af-5ee2f19fe92c",
+    "TimeSlotId": "ad3e8d51-f053-47cd-b3d2-ad41b6c5cbec",
+    "AppointmentDate": "2024-05-14T22:00:00+00:00",
+    "RoomNumber": 1,
+    "FirstName": "Liza",
+    "LastName": "Kshlerin",
+    "DateOfBirth": "1981-12-08T12:53:57.49+00:00",
+    "Email": "Kariane39@hotmail.com",
+    "CreatedAt": "2024-05-14T20:17:26.8726008+02:00"
+  },
+  {
+    "Id": "381a1186-ea94-4056-ac1b-5b4ca50835d4",
+    "TimeSlotId": "38da301b-95f8-4008-9445-901d6d77f34c",
+    "AppointmentDate": "2024-05-14T22:00:00+00:00",
+    "RoomNumber": 1,
+    "FirstName": "Cyrus",
+    "LastName": "West",
+    "DateOfBirth": "1946-07-25T01:37:48.237+00:00",
+    "Email": "Marcelino97@hotmail.com",
+    "CreatedAt": "2024-05-14T20:17:17.5537066+02:00"
+  },
+  {
+    "Id": "ae2147a9-e9ed-402f-83d5-79ccd16afefb",
+    "TimeSlotId": "639ba95e-7506-44c4-a6fc-8189a7bac4f3",
+    "AppointmentDate": "2024-05-13T22:00:00+00:00",
+    "RoomNumber": 1,
+    "FirstName": "Kayla",
+    "LastName": "Gleason",
+    "DateOfBirth": "1996-09-23T10:32:22.023+00:00",
+    "Email": "Renee_Lynch10@hotmail.com",
+    "CreatedAt": "2024-05-14T20:12:55.3517495+02:00"
+  },
+  {
+    "Id": "026decce-49c9-43a7-a5b8-3295e165bd85",
+    "TimeSlotId": "38da301b-95f8-4008-9445-901d6d77f34c",
+    "AppointmentDate": "2024-05-13T22:00:00+00:00",
+    "RoomNumber": 1,
+    "FirstName": "Lee",
+    "LastName": "Veum",
+    "DateOfBirth": "1963-02-03T14:21:28.09+00:00",
+    "Email": "Rene_Franecki@gmail.com",
+    "CreatedAt": "2024-05-14T20:12:24.4741099+02:00"
+  },
+  {
+    "Id": "433dd324-1ada-44c3-b5a4-9159d89ebeb2",
+    "TimeSlotId": "38da301b-95f8-4008-9445-901d6d77f34c",
+    "AppointmentDate": "2024-05-14T22:00:00+00:00",
+    "RoomNumber": 2,
+    "FirstName": "Rosemarie",
+    "LastName": "Waters",
+    "DateOfBirth": "2000-11-09T11:37:36.365+00:00",
+    "Email": "Nova96@gmail.com",
+    "CreatedAt": "2024-05-14T20:17:42.5283588+02:00"
+  }
+]

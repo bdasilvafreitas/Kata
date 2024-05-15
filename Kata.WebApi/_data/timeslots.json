@@ -1,0 +1,52 @@
+[
+  {
+    "Id": "38da301b-95f8-4008-9445-901d6d77f34c",
+    "StartTime": "08:00:00",
+    "EndTime": "08:30:00"
+  },
+  {
+    "Id": "639ba95e-7506-44c4-a6fc-8189a7bac4f3",
+    "StartTime": "08:30:00",
+    "EndTime": "09:00:00"
+  },
+  {
+    "Id": "29e944e8-9914-4aa3-bcf1-ae7421dda850",
+    "StartTime": "09:00:00",
+    "EndTime": "09:30:00"
+  },
+  {
+    "Id": "ad3e8d51-f053-47cd-b3d2-ad41b6c5cbec",
+    "StartTime": "09:30:00",
+    "EndTime": "10:00:00"
+  },
+  {
+    "Id": "59b1d8a4-df03-40f1-8403-cae3e9f7f2d2",
+    "StartTime": "10:00:00",
+    "EndTime": "10:30:00"
+  },
+  {
+    "Id": "a54de473-169d-4224-af89-8a7a8ba6d90e",
+    "StartTime": "10:30:00",
+    "EndTime": "11:00:00"
+  },
+  {
+    "Id": "1d1182d1-01b7-440f-9387-b3aa26a12f88",
+    "StartTime": "11:00:00",
+    "EndTime": "11:30:00"
+  },
+  {
+    "Id": "142ed033-edfa-4a0e-a83b-2530c0891310",
+    "StartTime": "11:30:00",
+    "EndTime": "12:00:00"
+  },
+  {
+    "Id": "5dc3000f-0aac-43f1-b20b-823f71e046a4",
+    "StartTime": "12:00:00",
+    "EndTime": "12:30:00"
+  },
+  {
+    "Id": "9da9f247-a1e8-47f4-be7e-22c995f546d6",
+    "StartTime": "12:30:00",
+    "EndTime": "13:00:00"
+  }
+]

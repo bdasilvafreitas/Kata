@@ -1,0 +1,135 @@
+<h2 mat-dialog-title>New appointment</h2>
+<div mat-dialog-content>
+  <div>
+    <form
+      [formGroup]="appointmentForm"
+      (ngSubmit)="onSubmit()"
+      class="appointment-form"
+    >
+      <div class="form-row">
+        <mat-form-field>
+          <mat-label>Appointment Date</mat-label>
+          <input
+            matInput
+            [matDatepicker]="appointmentDatepicker"
+            [min]="tomorowDate"
+            formControlName="appointmentDate"
+            placeholder="Choose a date"
+            required
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="appointmentDatepicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #appointmentDatepicker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Room</mat-label>
+          <mat-select
+            formControlName="room"
+            required
+            >
+            <!-- [disabled]="!appointmentForm.get('a')?.value" -->
+            <mat-option [value]="1">Room 1</mat-option>
+            <mat-option [value]="2">Room 2</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field>
+          <mat-label>Available Timeslot</mat-label>
+          <mat-select formControlName="timeSlot" required>
+            <mat-option
+              *ngFor="let item of timeSlots$ | async"
+              [value]="item.id"
+            >
+              {{ item.startTime }} - {{ item.endTime }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            formControlName="firstName"
+            placeholder="Enter your first name"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            formControlName="lastName"
+            placeholder="Enter your last name"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Date of Birth</mat-label>
+          <input
+            matInput
+            [max]="todayDate"
+            [matDatepicker]="dobPicker"
+            formControlName="dob"
+            placeholder="Select your date of birth"
+            required
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="dobPicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #dobPicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field>
+          <mat-label>Email Address</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <mat-error *ngIf="appointmentForm.get('email')?.hasError('email')">
+            Invalid Email Address
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div class="button-row">
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      *ngIf="!isProd"
+      (click)="onRandom()"
+      [disabled]="
+        !appointmentForm.get('appointmentDate')?.value ||
+        !appointmentForm.get('room')?.value
+      "
+    >
+      Random data for dev
+    </button>
+    <button mat-raised-button type="button" (click)="onCancel()">Cancel</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!appointmentForm.valid"
+      (click)="onSubmit()"
+    >
+      Book Appointment
+    </button>
+  </div>
+  <div></div>
+</div>

@@ -1,0 +1,29 @@
+mat-dialog-content {
+  padding: 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .form-row,
+    .button-row {
+      flex-direction: column;
+    }
+  }
+
+  
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

@@ -1,0 +1,63 @@
+<h3>List of appointments</h3>
+<div>
+  <table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let appointment">
+        {{ appointment.firstName }} {{ appointment.lastName | uppercase }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="slot">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Time Slot</th>
+      <td mat-cell *matCellDef="let appointment">
+        {{ appointment.appointmentDate | date : "shortDate" }} |
+        {{ appointment.timeSlot?.startTime }} -
+        {{ appointment.timeSlot?.endTime }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="roomNumber">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Room</th>
+      <td mat-cell *matCellDef="let appointment">
+        {{ appointment.roomNumber | roomName }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateOfBirth">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Date of Birth</th>
+      <td mat-cell *matCellDef="let appointment">
+        {{ appointment.dateOfBirth | date : "shortDate" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+      <td mat-cell *matCellDef="let appointment">{{ appointment.email }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="createdAt">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Created At</th>
+      <td mat-cell *matCellDef="let appointment">
+        {{ appointment.createdAt | date : "short" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let appointment">
+        <button mat-icon-button color="warn" (click)="onDelete(appointment.id)">
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let appointment; columns: displayedColumns"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[10, 25, 50]"></mat-paginator>
+</div>
+
+<!-- <div>
+  <pre>{{ appointments | json }}</pre>
+</div> -->
